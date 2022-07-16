@@ -62,9 +62,8 @@ module.exports = {
             console.log(err)
         }
     },
-    check: (req, res)=> {
+    me: (req, res)=> {
         console.log(req.user)
-        res.send("work test")
-
+        return Response.success(res, 200, "Data Successfully fetched", req.user)
     }
 }
